@@ -15,7 +15,7 @@ editList()
 
 submitBtn.addEventListener('click', (event)=>{
    event.preventDefault()
-   if(firstName.value !== '' && lastName.value !== "" && score.value !== ''){
+   if(firstName.value.trim() !== '' && lastName.value.trim() !== "" && score.value !== ''){
       let studnt = {name: lastName.value + " " + firstName.value, score: Number(score.value)}
       firstName.value = ''
       lastName.value = ''
@@ -39,7 +39,7 @@ function editList(){
       listContainer.append(nun)
    } else {
       if(selectFilter.value == 'all'){
-         studentsArray.map((itm)=>{
+         studentsArray.forEach((itm)=>{
             let item = document.createElement('tr')
             item.classList.add('item')
             listContainer.append(item)
@@ -66,9 +66,9 @@ function editList(){
             item.append(delBtn)
             delBtn.addEventListener('click', deleteItem)
    
-            let sumScores = studentsArray.reduce((acc, curnt) => acc + curnt.score, 0)
-            summaryCont.innerText = "The average score of the class is " + (sumScores/studentsArray.length).toFixed(2)
          })
+         let sumScores = studentsArray.reduce((acc, curnt) => acc + curnt.score, 0)
+         summaryCont.innerText = "The average score of the class is " + (sumScores/studentsArray.length).toFixed(2)
       } else {
          let filteredItm = studentsArray.filter((itm)=>{
             return getGrade(itm.score) == selectFilter.value
@@ -80,7 +80,7 @@ function editList(){
             listContainer.append(emp)
 
          } else {
-            filteredItm.map((itm)=>{
+            filteredItm.forEach((itm)=>{
                let item = document.createElement('tr')
                item.classList.add('item')
                listContainer.append(item)
@@ -107,9 +107,9 @@ function editList(){
                item.append(delBtn)
                delBtn.addEventListener('click', deleteItem)
       
-               let sumScores = studentsArray.reduce((acc, curnt) => acc + curnt.score, 0)
-               summaryCont.innerText = "The average score of the students with a grade " + selectFilter.value +" is " + (sumScores/filteredItm.length).toFixed(2)
             })
+            let sumScores = studentsArray.reduce((acc, curnt) => acc + curnt.score, 0)
+            summaryCont.innerText = "The average score of the students with a grade " + selectFilter.value +" is " + (sumScores/filteredItm.length).toFixed(2)
 
          }
       }
@@ -124,7 +124,7 @@ function deleteItem(){
 
 
 function getGrade (num){
-   if(num > 75){
+   if(num >= 75){
       return 'A'
    } else if(num < 75 && num >= 65){
       return 'B'
