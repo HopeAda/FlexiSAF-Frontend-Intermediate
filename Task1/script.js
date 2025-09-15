@@ -16,14 +16,17 @@ editList()
 submitBtn.addEventListener('click', (event)=>{
    event.preventDefault()
    if(firstName.value.trim() !== '' && lastName.value.trim() !== "" && score.value !== ''){
-      let studnt = {name: lastName.value + " " + firstName.value, score: Number(score.value)}
-      firstName.value = ''
-      lastName.value = ''
-      score.value = ''
+      if(!isNaN(Number(score.value)) && Number(score.value) >= 0  && Number(score.value) <= 100){
+         let studnt = {name: lastName.value + " " + firstName.value, score: Number(score.value)}
+         firstName.value = ''
+         lastName.value = ''
+         score.value = ''
+   
+         studentsArray.push(studnt)
+         editList()
+         selectFilter.value = 'all'
 
-      studentsArray.push(studnt)
-      editList()
-      selectFilter.value = 'all'
+      }
    }
 })
 
