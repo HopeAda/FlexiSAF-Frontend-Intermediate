@@ -108,7 +108,7 @@ function editList(){
                delBtn.addEventListener('click', deleteItem)
       
             })
-            let sumScores = studentsArray.reduce((acc, curnt) => acc + curnt.score, 0)
+            let sumScores = filteredItm.reduce((acc, curnt) => acc + curnt.score, 0)
             summaryCont.innerText = "The average score of the students with a grade " + selectFilter.value +" is " + (sumScores/filteredItm.length).toFixed(2)
 
          }
