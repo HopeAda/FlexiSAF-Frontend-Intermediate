@@ -26,7 +26,11 @@ submitBtn.addEventListener('click', (event)=>{
          editList()
          selectFilter.value = 'all'
 
+      } else {
+         alert("Please input a score between 0 and 100")
       }
+   } else {
+      alert("Please fill in all input fields")
    }
 })
 
