@@ -124,16 +124,16 @@ function deleteItem(){
 
 
 function getGrade (num){
-   if(num >= 75){
+   if(num >= 70){
       return 'A'
-   } else if(num < 75 && num >= 65){
+   } else if(num < 70 && num >= 60){
       return 'B'
 
-   } else if (num < 65 && num >= 55){
+   } else if (num < 60 && num >= 50){
       return 'C'
 
-   } else if (num < 55 && num >= 45){
-      return 'P'
+   } else if (num < 50 && num >= 45){
+      return 'D'
 
    } else if (num < 45){
       return 'F'
