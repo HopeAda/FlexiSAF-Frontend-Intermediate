@@ -343,7 +343,7 @@ const clearBtn = document.querySelector('.clearAllConf');
 clearBtn.addEventListener('click', ()=>{
    studentsArray.length = 0
    editList()
-   // localStorage.setItem('students', JSON.stringify(studentsArray))
+   localStorage.setItem('students', JSON.stringify(studentsArray))
    delCont.classList.remove('show')
    clearConf.classList.remove('show')
 })
