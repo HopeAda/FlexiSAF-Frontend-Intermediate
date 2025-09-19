@@ -224,6 +224,8 @@ form button{
    background-color: transparent;
    border: none;
    color: gray;
+   text-wrap: nowrap;
+   margin-left: 1rem;
 }
 .summaryCont .clearAll button:hover{
    color: black;
