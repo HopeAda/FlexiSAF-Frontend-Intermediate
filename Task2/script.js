@@ -25,106 +25,108 @@ formBg.addEventListener('click', ()=>{
 })
 
 
+
 let templateArray = [
-  { name: "Smith John", score: 87 },
-  { name: "Johnson Emma", score: 43 },
-  { name: "Williams Noah", score: 66 },
-  { name: "Brown Olivia", score: 92 },
-  { name: "Jones Liam", score: 15 },
-  { name: "Garcia Ava", score: 73 },
-  { name: "Miller Isabella", score: 58 },
-  { name: "Davis Mason", score: 94 },
-  { name: "Rodriguez Sophia", score: 21 },
-  { name: "Martinez Lucas", score: 39 },
-  { name: "Hernandez Amelia", score: 78 },
-  { name: "Lopez Ethan", score: 50 },
-  { name: "Gonzalez Mia", score: 99 },
-  { name: "Wilson Charlotte", score: 12 },
-  { name: "Anderson James", score: 64 },
-  { name: "Thomas Benjamin", score: 80 },
-  { name: "Taylor Harper", score: 34 },
-  { name: "Moore Ella", score: 47 },
-  { name: "Jackson Daniel", score: 70 },
-  { name: "Martin Grace", score: 88 },
-  { name: "Lee Henry", score: 59 },
-  { name: "Perez Chloe", score: 25 },
-  { name: "Thompson Samuel", score: 82 },
-  { name: "White Evelyn", score: 46 },
-  { name: "Harris Logan", score: 91 },
-  { name: "Sanchez Aria", score: 63 },
-  { name: "Clark David", score: 29 },
-  { name: "Ramirez Zoe", score: 76 },
-  { name: "Lewis Carter", score: 54 },
-  { name: "Robinson Lily", score: 18 },
-  { name: "Walker Owen", score: 84 },
-  { name: "Young Scarlett", score: 67 },
-  { name: "Allen Jack", score: 36 },
-  { name: "King Layla", score: 99 },
-  { name: "Wright Wyatt", score: 27 },
-  { name: "Scott Hannah", score: 60 },
-  { name: "Torres Luke", score: 74 },
-  { name: "Nguyen Natalie", score: 10 },
-  { name: "Hill Isaac", score: 96 },
-  { name: "Flores Lillian", score: 41 },
-  { name: "Green Gabriel", score: 85 },
-  { name: "Adams Victoria", score: 52 },
-  { name: "Nelson Jackson", score: 33 },
-  { name: "Baker Zoey", score: 89 },
-  { name: "Hall Levi", score: 19 },
-  { name: "Rivera Riley", score: 75 },
-  { name: "Campbell Penelope", score: 22 },
-  { name: "Mitchell Sebastian", score: 98 },
-  { name: "Carter Nora", score: 56 },
-  { name: "Roberts Matthew", score: 31 },
-  { name: "Gomez Eleanor", score: 93 },
-  { name: "Phillips Aiden", score: 65 },
-  { name: "Evans Stella", score: 38 },
-  { name: "Turner Julian", score: 72 },
-  { name: "Diaz Aurora", score: 16 },
-  { name: "Parker Mila", score: 100 },
-  { name: "Cruz Anthony", score: 45 },
-  { name: "Edwards Camila", score: 11 },
-  { name: "Collins Joseph", score: 83 },
-  { name: "Reyes Paisley", score: 28 },
-  { name: "Stewart Johnathan", score: 90 },
-  { name: "Morris Elena", score: 35 },
-  { name: "Morales Asher", score: 68 },
-  { name: "Murphy Violet", score: 55 },
-  { name: "Cook David", score: 13 },
-  { name: "Rogers Aurora", score: 71 },
-  { name: "Gutierrez Thomas", score: 40 },
-  { name: "Ortiz Addison", score: 95 },
-  { name: "Morgan Ezra", score: 26 },
-  { name: "Cooper Hazel", score: 79 },
-  { name: "Peterson Lincoln", score: 17 },
-  { name: "Bailey Ellie", score: 62 },
-  { name: "Reed Santiago", score: 48 },
-  { name: "Kelly Brooklyn", score: 100 },
-  { name: "Howard Caleb", score: 37 },
-  { name: "Ramos Bella", score: 53 },
-  { name: "Kim Josiah", score: 81 },
-  { name: "Cox Skylar", score: 20 },
-  { name: "Ward Isaiah", score: 69 },
-  { name: "Richardson Lucy", score: 42 },
-  { name: "Watson Charles", score: 61 },
-  { name: "Brooks Savannah", score: 14 },
-  { name: "Chavez Nolan", score: 86 },
-  { name: "Wood Madelyn", score: 32 },
-  { name: "James Elias", score: 44 },
-  { name: "Bennett Aubrey", score: 9 },
-  { name: "Gray Eliana", score: 97 },
-  { name: "Mendoza Christopher", score: 23 },
-  { name: "Ruiz Kennedy", score: 57 },
-  { name: "Hughes Nathan", score: 30 },
-  { name: "Price Sarah", score: 77 },
-  { name: "Alvarez Dylan", score: 8 },
-  { name: "Castillo Hailey", score: 49 },
-  { name: "Sanders Elias", score: 7 },
-  { name: "Patel Gianna", score: 51 },
-  { name: "Myers Andrew", score: 24 },
-  { name: "Long Anna", score: 6 },
-  { name: "Ross Samuel", score: 2 },
-  { name: "Foster Leah", score: 64 }
+  { id: 1, name: "Smith John", score: 85 },
+  { id: 2, name: "Johnson Emily", score: 72 },
+  { id: 3, name: "Williams Daniel", score: 64 },
+  { id: 4, name: "Brown Sophia", score: 91 },
+  { id: 5, name: "Jones Michael", score: 78 },
+  { id: 6, name: "Garcia Olivia", score: 59 },
+  { id: 7, name: "Miller James", score: 88 },
+  { id: 8, name: "Davis Isabella", score: 95 },
+  { id: 9, name: "Rodriguez Ethan", score: 47 },
+  { id: 10, name: "Martinez Ava", score: 83 },
+  { id: 11, name: "Hernandez Noah", score: 76 },
+  { id: 12, name: "Lopez Mia", score: 68 },
+  { id: 13, name: "Gonzalez Alexander", score: 54 },
+  { id: 14, name: "Wilson Amelia", score: 89 },
+  { id: 15, name: "Anderson Mason", score: 62 },
+  { id: 16, name: "Thomas Charlotte", score: 73 },
+  { id: 17, name: "Taylor Benjamin", score: 81 },
+  { id: 18, name: "Moore Harper", score: 97 },
+  { id: 19, name: "Jackson Elijah", score: 44 },
+  { id: 20, name: "Martin Abigail", score: 90 },
+  { id: 21, name: "Lee Logan", score: 67 },
+  { id: 22, name: "Perez Chloe", score: 82 },
+  { id: 23, name: "Thompson Lucas", score: 74 },
+  { id: 24, name: "White Lily", score: 65 },
+  { id: 25, name: "Harris Jacob", score: 92 },
+  { id: 26, name: "Sanchez Grace", score: 87 },
+  { id: 27, name: "Clark Samuel", score: 53 },
+  { id: 28, name: "Ramirez Zoey", score: 70 },
+  { id: 29, name: "Lewis Carter", score: 60 },
+  { id: 30, name: "Robinson Layla", score: 85 },
+  { id: 31, name: "Walker Jayden", score: 93 },
+  { id: 32, name: "Young Penelope", score: 77 },
+  { id: 33, name: "Allen David", score: 69 },
+  { id: 34, name: "King Aria", score: 58 },
+  { id: 35, name: "Wright Matthew", score: 84 },
+  { id: 36, name: "Scott Eleanor", score: 79 },
+  { id: 37, name: "Torres Joseph", score: 72 },
+  { id: 38, name: "Nguyen Scarlett", score: 64 },
+  { id: 39, name: "Hill Gabriel", score: 55 },
+  { id: 40, name: "Flores Hannah", score: 96 },
+  { id: 41, name: "Green Anthony", score: 82 },
+  { id: 42, name: "Adams Victoria", score: 73 },
+  { id: 43, name: "Nelson Andrew", score: 91 },
+  { id: 44, name: "Baker Zoey", score: 49 },
+  { id: 45, name: "Hall Joshua", score: 63 },
+  { id: 46, name: "Rivera Natalie", score: 87 },
+  { id: 47, name: "Campbell Christian", score: 94 },
+  { id: 48, name: "Mitchell Nora", score: 59 },
+  { id: 49, name: "Carter Dylan", score: 76 },
+  { id: 50, name: "Roberts Aurora", score: 83 },
+  { id: 51, name: "Gomez Isaac", score: 68 },
+  { id: 52, name: "Phillips Hazel", score: 80 },
+  { id: 53, name: "Evans Luke", score: 71 },
+  { id: 54, name: "Turner Violet", score: 62 },
+  { id: 55, name: "Diaz Henry", score: 93 },
+  { id: 56, name: "Parker Stella", score: 77 },
+  { id: 57, name: "Cruz Owen", score: 66 },
+  { id: 58, name: "Edwards Zoey", score: 85 },
+  { id: 59, name: "Collins Julian", score: 90 },
+  { id: 60, name: "Reyes Addison", score: 52 },
+  { id: 61, name: "Stewart Levi", score: 75 },
+  { id: 62, name: "Morris Eleanor", score: 84 },
+  { id: 63, name: "Morales Ryan", score: 61 },
+  { id: 64, name: "Murphy Lillian", score: 78 },
+  { id: 65, name: "Cook Caleb", score: 95 },
+  { id: 66, name: "Rogers Zoey", score: 71 },
+  { id: 67, name: "Morgan Nathan", score: 57 },
+  { id: 68, name: "Peterson Brooklyn", score: 82 },
+  { id: 69, name: "Bailey Jonathan", score: 64 },
+  { id: 70, name: "Cooper Leah", score: 86 },
+  { id: 71, name: "Richardson Aaron", score: 92 },
+  { id: 72, name: "Cox Savannah", score: 60 },
+  { id: 73, name: "Howard Adrian", score: 89 },
+  { id: 74, name: "Ward Audrey", score: 73 },
+  { id: 75, name: "Torres Adam", score: 58 },
+  { id: 76, name: "Gray Paisley", score: 96 },
+  { id: 77, name: "Ramsey Thomas", score: 70 },
+  { id: 78, name: "Watson Bella", score: 83 },
+  { id: 79, name: "Brooks Charles", score: 77 },
+  { id: 80, name: "Kelly Anna", score: 65 },
+  { id: 81, name: "Sanders Dominic", score: 59 },
+  { id: 82, name: "Price Madeline", score: 91 },
+  { id: 83, name: "Bennett Xavier", score: 74 },
+  { id: 84, name: "Wood Sarah", score: 88 },
+  { id: 85, name: "Barnes Christopher", score: 62 },
+  { id: 86, name: "Ross Claire", score: 81 },
+  { id: 87, name: "Henderson Eli", score: 56 },
+  { id: 88, name: "Cole Peyton", score: 85 },
+  { id: 89, name: "Jenkins Everly", score: 94 },
+  { id: 90, name: "Perry Jordan", score: 67 },
+  { id: 91, name: "Powell Camila", score: 72 },
+  { id: 92, name: "Long Isaiah", score: 79 },
+  { id: 93, name: "Patterson Lucy", score: 63 },
+  { id: 94, name: "Hughes Asher", score: 87 },
+  { id: 95, name: "Flores Mila", score: 76 },
+  { id: 96, name: "Washington Leo", score: 90 },
+  { id: 97, name: "Butler Ellie", score: 68 },
+  { id: 98, name: "Simmons Jack", score: 55 },
+  { id: 99, name: "Foster Skylar", score: 82 },
+  { id: 100, name: "Gonzales Aiden", score: 93 }
 ];
 
 
@@ -137,7 +139,7 @@ submitBtn.addEventListener('click', (event)=>{
    event.preventDefault()
    if(firstName.value.trim() !== '' && lastName.value.trim() !== "" && score.value !== ''){
       if(!isNaN(Number(score.value)) && Number(score.value) >= 0  && Number(score.value) <= 100){
-         let studnt = {name: lastName.value + " " + firstName.value, score: Number(score.value)}
+         let studnt = {id:Date.now(), name: lastName.value + " " + firstName.value, score: Number(score.value)}
          firstName.value = ''
          lastName.value = ''
          score.value = ''
@@ -175,6 +177,8 @@ function editList(){
             let item = document.createElement('tr')
             item.classList.add('item')
             listContainer.append(item)
+
+            item.setAttribute("data-id", itm.id)
 
             let numArea = document.createElement('td')
             numArea.innerText = index + 1;
@@ -227,6 +231,9 @@ function editList(){
                item.classList.add('item')
                listContainer.append(item)
 
+               item.setAttribute("data-id", itm.id)
+
+
             let numArea = document.createElement('td')
             numArea.innerText = index + 1;
             item.append(numArea)
@@ -273,12 +280,14 @@ const delAct = document.querySelector('.deleteConfirm')
 const delConfBtn = document.querySelector('.delBtnConf')
 const cancelBtn = document.querySelector('.cancelBtn')
 const delConfTitle = document.querySelector('.delConfTitle')
+
 let delIdx
 function confirmDelete(){
    delCont.classList.add('show')
    delAct.classList.add('show')
    document.body.style.overflow = 'hidden'
-   delIdx = Array.from(this.parentElement.parentElement.children).indexOf(this.parentElement)
+   delIdx = this.parentElement.getAttribute("data-id")
+
 }
 delConfBtn.addEventListener('click', deleteItem)
 
@@ -289,7 +298,8 @@ cancelBtn.addEventListener('click', ()=>{
 })
 
 function deleteItem(){
-   studentsArray.splice(delIdx, 1)
+   let mainDelId = studentsArray.find(stud => stud.id == delIdx)
+   studentsArray.splice(mainDelId, 1)
    editList()
    localStorage.setItem('students', JSON.stringify(studentsArray))
 
