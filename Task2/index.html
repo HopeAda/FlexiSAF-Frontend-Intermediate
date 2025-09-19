@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <header>
+      <div class="logo"><img src="dashboard.png" alt=""></div>
+      <h1>Student Grade Management System</h1>
+      <div class="add-new"><button>Add</button></div>
+   </header>
+   <div class="form-cont">
+   </div>
+   <div class="form">
+      <h1>Input New Student Grade</h1>
+      <form action="">
+         <div class="first">
+            <label for="first">First Name</label>
+            <input type="text" name="" id="first"
+            autocomplete="off">
+         </div>
+         <div class="last">
+            <label for="last">Last Name</label>
+            <input type="text" name="" id="last"
+            autocomplete="off">
+         </div>
+         <div class="score-inp">
+            <label for="score">Score</label>
+            <input type="number" name="" id="score" min="0" max="100" step="1" value="0"
+            autocomplete="off">
+         </div>
+         <button type="submit" id="submit-btn">Submit</button>
+      </form>
+   </div>
+   <main class="container">
+      <h1>Students Grades</h1>
+      <div class="filter">
+         <label for="select">Filter:</label>
+         <select name="" id="select">
+            <option value="all">All</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="F">F</option>
+         </select>
+      </div>
+      <table class="list">
+         <thead>
+            <tr>
+               <th>S/N</th>
+               <th>Name</th>
+               <th>Score</th>
+               <th>Grade</th>
+               <th></th>
+
+            </tr>
+         </thead>
+         <tbody class="list-tbl"></tbody>
+         <!-- <div class="item">
+            <div class="name">Hope Ada</div>
+            <div class="score"> Score: 89</div>
+            <button>Delete</button>
+         </div>
+         <div class="item">
+            <div class="name">Hope Ada</div>
+            <div class="score">Score: 89</div>
+            <button>Delete</button>
+         </div> -->
+
+      </table>
+      <div class="summary">
+         
+      </div>
+   </main>
+
+
+   <script src="./script.js"></script>
+</body>
+</html>

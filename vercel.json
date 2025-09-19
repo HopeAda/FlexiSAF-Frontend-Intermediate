@@ -1,5 +1,6 @@
 {
    "rewrites": [
-      {"source": "/TASK1/(.*)", "destination": "/Task1/$1" }
+      {"source": "/TASK1/(.*)", "destination": "/Task1/$1" },
+      {"source": "/TASK2/(.*)", "destination": "/Task2/$1"}
    ]
 }

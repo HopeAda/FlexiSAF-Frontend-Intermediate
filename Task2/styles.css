@@ -1,0 +1,212 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100vw;
+   min-height: 100vh;
+}
+
+/* Header section */
+header{
+   background-color:rgb(224, 217, 241);
+   display:flex;
+   flex-direction: row;
+   align-items: center;
+   width: 100%;
+   padding: 1rem;
+}
+
+/* Logo */
+header .logo{
+   width: 30px;
+   height: 30px;
+   margin-right: 1rem;
+}
+header .logo img{
+   width: 100%;
+}
+
+/* Heading */
+header h1{
+   font-size: 1rem;
+   margin-right: 1rem;
+}
+
+/* Add button */
+header .add-new{
+   margin-left: auto;
+}
+
+header .add-new button{
+   border: none;
+   padding: .5rem 1rem;
+   border-radius: 20px;
+   cursor: pointer;
+   font-weight: bold;
+   font-size: .8rem;
+   text-wrap: nowrap;
+}
+
+
+/* Form */
+
+.form-cont{
+   position: absolute;
+   background-color: rgba(0,0,0,.5);
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   display: none;
+   z-index: 5;
+}
+.form-cont.show{
+   display: block;
+}
+.form{
+   z-index: 15;
+   background-color: white;
+   width: fit-content;
+   padding: 1rem;
+   border-radius: 7px;
+   display: none;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+.form.show{
+   display: flex;
+   flex-direction: column;
+}
+
+.form h1{
+   font-size: 1.3rem;
+   margin-bottom: .5rem;
+}
+
+form{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: .5rem;
+}
+form > div{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+
+}
+
+form input, form button{
+   padding: .5rem 1rem;
+   border-radius: 3px;
+   border: 1px solid black;
+   background-color: transparent;
+}
+
+form button{
+   margin-top: .5rem;
+   cursor: pointer;
+}
+
+
+
+/* Main section */
+.container{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   padding: 0 .5rem;
+   padding-bottom: 3rem;
+   max-width: 600px;
+}
+.container h1{
+   font-size: 1.3rem;
+   margin-top: 1.5rem;
+   margin-bottom: .6rem;
+}
+
+.filter{
+   width: 100%;
+   display: inline-flex;
+   align-items: center;
+   justify-content: flex-start;
+   gap: .5rem;
+}
+
+/* Table List */
+.list{
+   border-collapse: collapse;
+   width: 100%;
+   table-layout: fixed;
+   margin-top: 1rem;
+}
+/* Table head */
+.list thead{
+   background-color: black;
+   color: white;
+   border-collapse: collapse;
+   width: 100%;
+}
+.list thead th{
+   text-align: left;
+   padding: 10px 2px;
+   border: 1px solid black;
+}
+
+/* Delete button */
+.list button{
+   background-color: transparent;
+   border: none;
+   width: fit-content;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   justify-self: center;
+}
+.list img{
+   width: 15px;
+   height: 15px;
+}
+
+/* List body */
+.list tbody{
+   width: 100%;
+}
+.list tbody td{
+   padding: 5px 2px;
+   border: 1px solid black;
+   text-align: center;
+   width: fit-content;
+   text-align: left;
+   border-bottom: 1px solid black;
+   border-top: 1px solid black;
+   border-left: none;
+   border-right: none;
+}
+
+.list thead th:nth-of-type(2),
+.list tbody td:nth-of-type(2){
+   width: 45%;
+   text-transform: capitalize;
+}
+
+
+
+.summary{
+   position: fixed;
+   width: 100%;
+   background-color: rgb(224, 217, 241);
+   bottom: 0;
+   left: 0;
+   padding: .3rem 1rem;
+   font-weight: normal;
+   color: gray;
+}
