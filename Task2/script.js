@@ -16,14 +16,16 @@ newBtn.addEventListener('click', ()=>{
    formBg.classList.add('show')
    formAct.classList.add('show')
    firstName.focus()
+   document.body.style.overflow = 'hidden'
 })
 formBg.addEventListener('click', ()=>{
    formBg.classList.remove('show')
    formAct.classList.remove('show')
-
+   document.body.style.overflow = 'visible'
 })
 
-let studentsArray = [
+
+let templateArray = [
   { name: "Smith John", score: 87 },
   { name: "Johnson Emma", score: 43 },
   { name: "Williams Noah", score: 66 },
@@ -125,6 +127,10 @@ let studentsArray = [
   { name: "Foster Leah", score: 64 }
 ];
 
+
+let studentsArray = JSON.parse(localStorage.getItem('students')) || templateArray;
+
+
 editList()
 
 submitBtn.addEventListener('click', (event)=>{
@@ -137,6 +143,7 @@ submitBtn.addEventListener('click', (event)=>{
          score.value = ''
    
          studentsArray.push(studnt)
+         localStorage.setItem('students', JSON.stringify(studentsArray))
          editList()
          selectFilter.value = 'all'
          selectFilter.dispatchEvent(new Event('change'))
@@ -198,7 +205,7 @@ function editList(){
             item.append(delBtn)
             btnArea.append(delBtn)
             item.append(btnArea)
-            btnArea.addEventListener('click', deleteItem)
+            btnArea.addEventListener('click', confirmDelete)
    
          })
          let sumScores = studentsArray.reduce((acc, curnt) => acc + curnt.score, 0)
@@ -250,7 +257,7 @@ function editList(){
             item.append(delBtn)
             btnArea.append(delBtn)
             item.append(btnArea)
-            btnArea.addEventListener('click', deleteItem)
+            btnArea.addEventListener('click', confirmDelete)
       
             })
             let sumScores = filteredItm.reduce((acc, curnt) => acc + curnt.score, 0)
@@ -261,10 +268,34 @@ function editList(){
    }
 }
 
+const delCont = document.querySelector('.deleteCont');
+const delAct = document.querySelector('.deleteConfirm')
+const delConfBtn = document.querySelector('.delBtnConf')
+const cancelBtn = document.querySelector('.cancelBtn')
+let delIdx
+function confirmDelete(){
+   delCont.classList.add('show')
+   delAct.classList.add('show')
+   document.body.style.overflow = 'hidden'
+   delIdx = Array.from(this.parentElement.parentElement.children).indexOf(this.parentElement)
+}
+delConfBtn.addEventListener('click', deleteItem)
+
+cancelBtn.addEventListener('click', ()=>{
+   delCont.classList.remove('show')
+   delAct.classList.remove('show')
+   document.body.style.overflow = 'visible'
+})
+
 function deleteItem(){
-   let idx = Array.from(this.parentElement.parentElement.children).indexOf(this.parentElement)
-   studentsArray.splice(idx, 1)
+   studentsArray.splice(delIdx, 1)
    editList()
+   localStorage.setItem('students', JSON.stringify(studentsArray))
+
+   // Remove the delete modal
+   delCont.classList.remove('show')
+   delAct.classList.remove('show')
+
 }
 
 
