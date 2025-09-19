@@ -4,6 +4,9 @@
    box-sizing: border-box;
 }
 
+html{
+   overflow-y: scroll;
+}
 body{
    display: flex;
    flex-direction: column;
@@ -203,6 +206,10 @@ form button{
 .list tbody td:nth-of-type(2){
    width: 45%;
    text-transform: capitalize;
+}
+
+.del-btn{
+   cursor: pointer;
 }
 
 
