@@ -10,3 +10,4 @@ I added styles to the entire page, and added additional html elements like the a
 I added a modal for confirming deletion of items in the list.
 I added a default template array for the site to allow all functionalities to be seen easily
 Added local storage to allow for persistence of data
+Added a button to clear the list

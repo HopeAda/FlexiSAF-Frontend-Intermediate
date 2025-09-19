@@ -272,6 +272,7 @@ const delCont = document.querySelector('.deleteCont');
 const delAct = document.querySelector('.deleteConfirm')
 const delConfBtn = document.querySelector('.delBtnConf')
 const cancelBtn = document.querySelector('.cancelBtn')
+const delConfTitle = document.querySelector('.delConfTitle')
 let delIdx
 function confirmDelete(){
    delCont.classList.add('show')
@@ -320,4 +321,36 @@ function getGrade (num){
 
 selectFilter.addEventListener('change', ()=>{
    editList()
+})
+
+
+
+// Clear the list
+const clearConf = document.querySelector('.clearAllConfirm')
+
+function clearAllConf(){
+   delCont.classList.add('show')
+   clearConf.classList.add('show')
+   document.body.style.overflow = 'hidden'
+   delIdx = Array.from(this.parentElement.parentElement.children).indexOf(this.parentElement)
+
+}
+
+const clearAll = document.querySelector('.clearAll')
+clearAll.addEventListener('click', clearAllConf)
+
+const clearBtn = document.querySelector('.clearAllConf');
+clearBtn.addEventListener('click', ()=>{
+   studentsArray.length = 0
+   editList()
+   // localStorage.setItem('students', JSON.stringify(studentsArray))
+   delCont.classList.remove('show')
+   clearConf.classList.remove('show')
+})
+
+const clearCancel = document.querySelector('.clearCancelBtn')
+clearCancel.addEventListener('click', ()=>{
+   delCont.classList.remove('show')
+   clearConf.classList.remove('show')
+   document.body.style.overflow = 'visible'
 })

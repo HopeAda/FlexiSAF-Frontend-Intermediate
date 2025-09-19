@@ -207,7 +207,7 @@ form button{
 
 
 
-.summary{
+.summaryCont{
    position: fixed;
    width: 100%;
    background-color: rgb(224, 217, 241);
@@ -216,11 +216,23 @@ form button{
    padding: .3rem 1rem;
    font-weight: normal;
    color: gray;
+   display: inline-flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.summaryCont .clearAll button{
+   background-color: transparent;
+   border: none;
+   color: gray;
+}
+.summaryCont .clearAll button:hover{
+   color: black;
+   cursor: pointer;
 }
 
 
 .deleteCont{
-   position: absolute;
+   position: fixed;
    width: 100%;
    height: 100%;
    top: 0;
@@ -229,8 +241,8 @@ form button{
    background-color: rgba(0,0,0,.5);
    display: none;
 }
-.deleteConfirm{
-   position: absolute;
+.conf{
+   position: fixed;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
@@ -243,19 +255,19 @@ form button{
    gap: 1rem;
    padding: 1rem;
 }
-.deleteConfirm .btns{
+.conf .btns{
    width: 100%;
    display: inline-flex;
    align-items: center;
    justify-content: space-between;
 }
-.deleteConfirm .btns button{
+.conf .btns button{
    padding: .5rem .9rem;
    border-radius: 5px;
    border: none;
    cursor: pointer;
 }
-.deleteConfirm .btns button:first-of-type{
+.conf .btns button:first-of-type{
    background-color: red;
    color: white;
 }
@@ -263,7 +275,7 @@ form button{
 .deleteCont.show{
    display: block;
 }
-.deleteConfirm.show{
+.conf.show{
    display: flex;
 }
 
