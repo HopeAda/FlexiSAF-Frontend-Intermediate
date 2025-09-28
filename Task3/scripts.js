@@ -45,3 +45,16 @@ function validateEmail(email){
 
 
 submitBtn.addEventListener('click', submitHandler)
+
+
+
+let toggleBtn = document.querySelector('.toggle')
+let themeImg = document.querySelector('.toggle img')
+
+let darkMode = true
+toggleBtn.addEventListener('click', ()=>{
+   darkMode = !darkMode
+
+   themeImg.src = darkMode ? './icons8-moon-48.png' : './icons8-sun-150.png'
+   document.documentElement.classList.toggle('light', !darkMode)
+})

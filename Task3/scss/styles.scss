@@ -7,11 +7,28 @@
    box-sizing: border-box;
 }
 
+
+:root{
+   --bg-color:#000000;
+   --text-color:#fff;
+   --accent-color:#ff00ff;
+   --foot-color:#1a1a1a;
+
+}
+
+:root.light{
+   --bg-color:#fff;
+   --text-color:#000000;
+   --accent-color:#ff00ff;
+   --foot-color:#f5f5f5;
+
+}
+
 body{
-   background-color: black;
+   background-color: var(--bg-color);
    width: 100%;
    min-height: 100vh;
-   color: white;
+   color: var(--text-color);
    font-family: 'Oxanium', sans-serif;
    display: flex;
    flex-direction: column;
@@ -27,10 +44,11 @@ header{
    width: 100%;
    justify-content: flex-end;
    align-items: center;
-   // background-color: transparentize($color: #000000, $amount: 1);
    height: 50px;
    z-index: 15;
    position: fixed;
+   top: 0;
+   left: 0;
    padding: 0 .5rem;
 }
 
@@ -42,7 +60,7 @@ header{
    height: 40px;
    border-radius: 50%;
    cursor: pointer;
-   opacity: .2;
+   opacity: .35;
    
    img{
       width: 30px;
@@ -55,32 +73,6 @@ header{
       transition: all .7s ease;
    }
 }
-
-
-// .toggle{
-//    width: 40px;
-//    height: 25px;
-//    background-color: red;
-//    border-radius: 20px;
-//    display: inline-flex;
-//    justify-content: flex-start;
-//    align-items: center;
-//    position: relative;
-//    padding: 5px;
-
-//    .toggle-circle{
-//       width: 15px;
-//       height: 15px;
-//       background-color: blue;
-//       border-radius: 50%;
-//       transition: translate .5s ease;
-//    }
-
-//    &:hover .toggle-circle{
-//       translate: 100%;
-//    }
-
-// }
 
 
 
@@ -118,7 +110,7 @@ main{
       text-align: center;
 
       span{
-         color: #ff00ff;
+         color: var(--accent-color);
          text-transform: uppercase;
          white-space: nowrap;
          font-size: 1.8rem;
@@ -134,8 +126,6 @@ main{
       left: 50%;
       transform: translate(-50%, 50%);
       z-index: 15;
-      // outline: 2px solid plum;
-      // outline-offset: 10px;
 
       img{
          width: 100%;
@@ -152,7 +142,7 @@ main{
          transform: translate(-50%,-50%);
          width: 180px;
          height: 180px;
-         border: 1px solid #ff00ff;
+         border: 1px solid var(--accent-color);
          border-radius: 50%;
          z-index: 10;
          transition: box-shadow .5s ease;
@@ -160,7 +150,7 @@ main{
 
 
       &:hover::after{
-         box-shadow: 0 0 30px 3px #ff00ff;
+         box-shadow: 0 0 30px 3px var(--accent-color);
       }
    }
 }
@@ -179,7 +169,7 @@ main{
 
    h2{
       text-decoration: underline;
-      text-decoration-color: #ff00ff;
+      text-decoration-color: var(--accent-color);
       text-decoration-style:dotted;
       text-underline-offset: 5px;
       font-size: 1.5rem;
@@ -223,7 +213,7 @@ section.contact{
          text-decoration: none;
          width: 100%;
          height: 100%;
-         color: white;
+         color: var(--text-color);
          display: flex;
          align-items: center;
          justify-content: center;
@@ -247,7 +237,7 @@ section.contact{
 footer{
    width: 100%;
    height: fit-content;
-   background-color: lighten(black, 10%);
+   background-color: var(--foot-color);
    padding: 1rem 2rem;
    margin-top: 3rem;
    display: flex;
@@ -273,15 +263,16 @@ footer{
             padding: .6rem 1rem;
             border-radius: 3px;
             outline: none;
-            border: 2px solid;
-            border-color: transparent;
+            border: 1px solid;
+            border-color: black;
             resize: none;
             font-family: 'Oxanium', sans-serif;
             font-weight: bold;
 
 
+
             &:focus{
-               border-color:#ff00ff;
+               border-color:var(--accent-color);
             }
          }
       }
@@ -292,10 +283,11 @@ footer{
          padding: .6rem 1rem;
          outline: none;
          border: none;
-         background-color: white;
+         background-color: var(--text-color);
+         color: var(--bg-color);
          font-weight: 600;
          cursor: pointer;
-         box-shadow: 0 3px 0 0 #ff00ff;
+         box-shadow: 0 3px 0 0 var(--accent-color);
          
          &:active{
             box-shadow: none;
@@ -308,12 +300,6 @@ footer{
 
 
 
-// .message-cont{
-//    position: absolute;
-//    width: 100%;
-//    height: 100%;
-//    background-color: rgba(0,0,0,.5);
-// }
 
 .success-msg{
    position: fixed;
