@@ -11,3 +11,10 @@ I added a modal for confirming deletion of items in the list.
 I added a default template array for the site to allow all functionalities to be seen easily
 Added local storage to allow for persistence of data
 Added a button to clear the list
+
+
+TASK 3:
+I created a simple portfolio page, and styled it with the sass/scss preprocessor
+
+TASK 4: 
+I created a folder focused on git, and I practised the git commands with image proof placed in the markdown file in my task4 folder

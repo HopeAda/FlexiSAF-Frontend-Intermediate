@@ -1,3 +1,0 @@
-ToDo List
-1. Initialise Repository
-2. Make first Commit
