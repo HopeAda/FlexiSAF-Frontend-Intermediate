@@ -1,0 +1,49 @@
+.list-item{
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  text-align: left;
+  height: 65px;
+}
+
+.list-item span{
+  overflow-wrap: break-word;
+  width: 70%;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.list-item button{
+  display: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin-right: .5rem;
+  margin-left: .5rem;
+}
+
+.list-item button img{
+  width: 20px;
+}
+
+.list-item:hover{
+  background-color: #4d5663;
+  border-radius: 7px;
+}
+
+.list-item:hover button{
+  display: block;
+}
+
+.list-item button:hover{
+  scale: 1.1;
+  transition: scale .4s ease;
+}
+
+
+input[type = checkbox]{
+   accent-color: #76abae;
+}

@@ -4,5 +4,6 @@
       {"source": "/TASK2/(.*)", "destination": "/Task2/$1"},
       {"source": "/TASK3/(.*)", "destination": "/Task3/$1"},
       {"source": "/TASK5/(.*)", "destination": "/Task5/$1"}
+      {"source": "/TASK6/(.*)", "destination": "/Task6/$1"}
    ]
 }
